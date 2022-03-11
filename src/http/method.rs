@@ -1,6 +1,7 @@
 use std::str::FromStr;
 
 /// HTTP methods
+#[derive(Debug)]
 pub enum Method {
     GET,
     POST,
@@ -30,7 +31,6 @@ impl FromStr for Method {
             _ => Err(MethodError),
         }
     }
-
 }
 
 pub struct MethodError;
